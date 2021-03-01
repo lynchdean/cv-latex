@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.5, 1 December 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\PassOptionsToPackage{lowtilde}{url}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[9pt,a4paper,ragged2e, normalphoto]{altacv-dean}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{IFBlue}{HTML}{0F6688}
+\definecolor{IFDarkBlue}{HTML}{00425C}
+\definecolor{IFMediumBlue}{HTML}{17739A}
+\definecolor{IFLightBlue}{HTML}{228FBD}
+
+\definecolor{IFGrey}{HTML}{6D6E71}
+\definecolor{IFDarkGrey}{HTML}{231F20}
+\definecolor{IFMediumGrey}{HTML}{4D4D4F}
+\definecolor{IFLightGrey}{HTML}{808285}
+
+\colorlet{heading}{IFBlue}
+\colorlet{accent}{IFLightBlue}
+\colorlet{emphasis}{IFMediumGrey}
+\colorlet{body}{IFGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{pubs.bib}
+
+\begin{document}
+\name{Dean Lynch}
+\tagline{DCU Computer Applications \& Software Engineering Graduate}
+% \photo{2.8cm}{filename}
+\personalinfo{%
+  \email{Redacted}
+  \phone{Redacted}
+  \location{Dublin, Ireland}
+  \linkedin{in/deanlynch97}
+  \github{github.com/lynchdean}
+  \homepage{deanlynch.xyz}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+
+\cvsection{Profile}
+\begin{multline}
+    Graduate from Dublin City University, BSc. in Computer Applications \& Software Engineering. I'm currently looking for a graduate or entry-level position in software engineering or a similar role. I'm primarily interested in Python, Java, or JavaScript roles, but I'm open to anything else if it's a good opportunity for me to learn and gain experience.
+\end{multline}
+
+\cvsection{Experience}
+    \cvevent{Software Engineering Intern}{Bloomberg PolarLake}{April 2018 -- September 2018}{Dublin}{}{}
+    \begin{itemize}
+        \item Successfully developed a query service controller and user interface using Java and Angular 6.
+        \item Investigated and implemented Apache Cassandra with an existing file store.
+        \item Carried out performance testing using Gatling for a new service API, and documented the results at each stage of development.
+        \item Generated graphs and reports from various JSON input using Python, Java, Kibana.
+        \item Bug fixing and improvements to business logic.
+    \end{itemize}
+    \divider
+    
+    \cvevent{Warehouse Operator}{Life-Cycle Ltd.}{Summer Months, 2015 -- 2017}{Gormanston, Co. Meath}{}{}
+    \begin{itemize}
+        \item  Responsible for checking all inventory in and out of the warehouse.
+        \item Reorganised warehouse for maximum efficiency.
+        \item Sales at promotional sporting events such as the Dublin Marathon.
+    \end{itemize}
+
+\end{fullwidth}
+
+\cvsection[sidebar]{Education}
+    \cvevent{BSc. in Computer Applications \& Software Engineering}{Dublin City University}{2015 -- 2019}{Dublin}{}{}
+    
+    \divider
+    
+    \cvevent{Leaving Certificate}{St. Josephs Secondary School}{2009 -- 2015}{Rush, Co. Dublin}{}{}
+
+
+\cvsection{Projects}
+    \cvevent{Password Manager with P2P Synchronisation}{Final Year Project}{2019}{}{}{}
+    \begin{itemize}
+        \item A cross-platform desktop application using a locally stored KeePass database.
+        \item Integrated P2P database synchronisation.
+        \item Technologies: Java, JavaFx, KeePass.
+    \end{itemize}
+    \divider
+
+    \cvevent{Freelance Web Application using Ethereum Blockchain}{Third Year project (Pair)}{2018}{}{}{}
+    \begin{itemize}
+        \item  A modern web application for people seeking or providing freelance work.
+        \item All accounts and transactions stored using smart contracts on the Etherium blockchain.
+        \item Technologies: JavaScript, Solidity, AngularJS, web3.js.
+    \end{itemize}
+    
+    \begin{fullwidth}
+    \divider
+    
+    \cvevent{Product Finder \& Automated Checkout tool}{Personal Project}{2017}{}{}{}
+    \begin{itemize}
+        \item A web scraping tool to find the product page of a product on a specified website.
+        \item Automatic check-out and configurable auto-fill using a selenium driven web browser.
+        \item Technologies: Python, Selenium, Beautiful Soup.
+    \end{itemize}
+    \divider
+    
+    \cvevent{Bird Watch Fingal Website}{bwifingal.ie}{2021}{}{}{}
+    \begin{itemize}
+        \item Modern and responsive website built for the Bird Watch Ireland Fingal branch.
+        \item Technologies: React, TypeScript, Bootstrap.
+    \end{itemize}
+
+\end{fullwidth}
+
+\end{document}
